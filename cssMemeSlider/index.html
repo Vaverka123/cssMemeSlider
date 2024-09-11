@@ -1,57 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Css Meme Slider</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="slider">
+      <input type="radio" name="slider" id="slide1" checked />
+      <input type="radio" name="slider" id="slide2" />
+      <input type="radio" name="slider" id="slide3" />
+      <input type="radio" name="slider" id="slide4" />
+      <input type="radio" name="slider" id="slide5" />
+
       <div class="slides">
-        <img
-          src="./assets/meme-argue.jpeg"
-          alt="gentlemen sharpening knife"
-          class="slide"
-        />
-        <img
-          src="./assets/meme-call.jpeg"
-          alt="scene from lord of ring"
-          class="slide"
-        />
-        <img
-          src="./assets/meme-personal.jpeg"
-          alt="gossip creation"
-          class="slide"
-        />
-        <img
-          src="./assets/meme-ring.jpeg"
-          alt="how to bake the ring"
-          class="slide"
-        />
-        <img
-          src="./assets/meme-shipped.png"
-          alt="woman looking at the calm sea"
-          class="slide"
-        />
-      </div>
-      <div class="controls">
-        <input type="radio" name="1" id="1" />
-        <input type="radio" name="2" id="2" />
-        <input type="radio" name="3" id="3" />
-        <input type="radio" name="4" id="4" />
-        <input type="radio" name="5" id="5" />
-      </div>
-      <div class="labels">
-        <label for="1">
-          When someone starts argument with me about something I know a lot
-          about
-        </label>
-        <label for="2">
-          ..is that so hard to make a call?? - Well no ... and yes.
-        </label>
-        <label for="3">..all that mad stuff...</label>
-        <label for="4">OOps! too much cruelty, malice and will</label>
-        <label for="5">Your order has been shipped!</label>
+        <div class="slide">
+          <img src="assets/meme-argue.jpeg" alt="Мем 1" style="width: 100%" />
+          <div class="slide-description">
+            <div class="controls">
+              <label for="slide1">1</label>
+              <label for="slide2">2</label>
+              <label for="slide3">3</label>
+              <label for="slide4">4</label>
+              <label for="slide5">5</label>
+            </div>
+            <div class="caption">when someone starts argueing with me</div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/meme-call.jpeg" alt="Мем 2" style="width: 100%" />
+          <div class="slide-description">
+            <div class="controls">
+              <label for="slide1">1</label>
+              <label for="slide2">2</label>
+              <label for="slide3">3</label>
+              <label for="slide4">4</label>
+              <label for="slide5">5</label>
+            </div>
+            <div class="caption">is it that hard to make a call</div>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="assets/meme-personal.jpeg"
+            alt="Мем 3"
+            style="width: 100%"
+          />
+          <div class="slide-description">
+            <div class="controls">
+              <label for="slide1">1</label>
+              <label for="slide2">2</label>
+              <label for="slide3">3</label>
+              <label for="slide4">4</label>
+              <label for="slide5">5</label>
+            </div>
+            <div class="caption">all that mad stuff</div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/meme-ring.jpeg" alt="Мем 2" style="width: 100%" />
+
+          <div class="slide-description">
+            <div class="controls">
+              <label for="slide1">1</label>
+              <label for="slide2">2</label>
+              <label for="slide3">3</label>
+              <label for="slide4">4</label>
+              <label for="slide5">5</label>
+            </div>
+            <div class="caption">just add some will and malice</div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/meme-shipped.png" alt="Мем 3" style="width: 100%" />
+          <div class="slide-description">
+            <div class="controls">
+              <label for="slide1">1</label>
+              <label for="slide2">2</label>
+              <label for="slide3">3</label>
+              <label for="slide4">4</label>
+              <label for="slide5">5</label>
+            </div>
+            <div class="caption">it`s surely been shipped</div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
