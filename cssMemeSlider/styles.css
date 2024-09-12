@@ -5,7 +5,7 @@ body {
 .slider {
   width: 400px;
   overflow: hidden;
-  margin: 30px auto;
+  margin: auto;
 }
 .slides {
   display: flex;
@@ -25,19 +25,34 @@ input[type="radio"] {
 .slide-description {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
 }
 
 .controls {
   margin: 10px 0;
+  width: 40vw;
+  transition: transform 1ms linear;
 }
+
+.caption {
+  margin-top: 10px;
+  width: 60vw;
+}
+
 label {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+  color: gray;
   cursor: pointer;
-  padding: 10px;
-  background: #ccc;
-  margin: 0 5px;
-  border-radius: 5px;
+  margin: 0 3px;
 }
+
+label:hover {
+  background-color: blue;
+}
+
 #slide1:checked ~ .slides {
   transform: translateX(0);
 }
@@ -53,6 +68,11 @@ label {
 #slide5:checked ~ .slides {
   transform: translateX(-1600px);
 }
-.caption {
-  margin-top: 10px;
+
+input[type="radio"]#slide1:checked ~ .slides label[for="slide1"],
+input[type="radio"]#slide2:checked ~ .slides label[for="slide2"],
+input[type="radio"]#slide3:checked ~ .slides label[for="slide3"],
+input[type="radio"]#slide4:checked ~ .slides label[for="slide4"],
+input[type="radio"]#slide5:checked ~ .slides label[for="slide5"] {
+  background-color: red;
 }
