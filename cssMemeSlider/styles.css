@@ -1,0 +1,119 @@
+body {
+  background-color: bisque;
+}
+.slider {
+  width: 400px;
+  overflow: hidden;
+  margin: auto;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 40px;
+  min-width: 400px;
+  height: 90vh;
+  position: static;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slide-description {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.controls {
+  margin: 10px 0;
+  display: flex;
+  justify-content: end;
+}
+
+.caption {
+  margin-top: 10px;
+  width: 60vw;
+  font-family: Arial, sans-serif;
+  color: tomato;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1023px) {
+  .slide {
+    row-gap: 20px;
+  }
+
+  .slide-description {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .controls {
+    justify-content: center;
+  }
+
+  .caption {
+    width: 100%;
+  }
+}
+
+label {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+  color: gray;
+  cursor: pointer;
+  margin: 0 3px;
+  padding: 5px;
+}
+
+label:hover {
+  background-color: blue;
+}
+
+#slide1:checked ~ .slides {
+  transform: translateX(0);
+}
+#slide2:checked ~ .slides {
+  transform: translateX(-400px);
+}
+#slide3:checked ~ .slides {
+  transform: translateX(-800px);
+}
+#slide4:checked ~ .slides {
+  transform: translateX(-1200px);
+}
+#slide5:checked ~ .slides {
+  transform: translateX(-1600px);
+}
+/* 
+#slide1:checked ~ .controls {
+  transform: translateX(0);
+}
+#slide2:checked ~ .controls {
+  transform: translateX(400px);
+}
+#slide3:checked ~ .controls {
+  transform: translateX(800px);
+}
+#slide4:checked ~ .controls {
+  transform: translateX(1200px);
+}
+#slide5:checked ~ .controls {
+  transform: translateX(1600px);
+} */
+
+input[type="radio"]#slide1:checked ~ .slides label[for="slide1"],
+input[type="radio"]#slide2:checked ~ .slides label[for="slide2"],
+input[type="radio"]#slide3:checked ~ .slides label[for="slide3"],
+input[type="radio"]#slide4:checked ~ .slides label[for="slide4"],
+input[type="radio"]#slide5:checked ~ .slides label[for="slide5"] {
+  background-color: red;
+}
